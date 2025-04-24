@@ -1,0 +1,87 @@
+# Meta
+expname: '/lego'
+dataset_name: 'nerf_synthetic'
+scene_name: 'lego' 
+data_downsample: 1.0
+
+# Directories to update
+data_dir : 'data/lego'
+output_dir: 'outputs/output'
+cache_dir: 'outputs/cache'
+log_dir: 'outputs/logs'
+checkpoint_dir: 'outputs/checkpoints'
+
+verbose: True
+
+# Checkpoint loading
+load_checkpoint: False
+checkpoint_v: 0
+
+# Optimization settings
+epochs: 100
+batch_size: 4096
+enable_xformers_memory_efficient_attention: True
+noise_batch_size: 1
+optim_type: 'adam'
+scheduler_type: 'warmup_cosine'
+
+# Alternate training settings
+epochs_kplanes: 1
+lr_kplanes: 0.01
+lr_kplanes_finetune: 0.005
+epochs_diffusion: 3000
+lr_diffusion: 0.0001
+kplanes_lr_warmup_steps: 2
+
+# Scene settings
+use_appearance_embeddings: False
+appearance_embeddings_dim: 0
+contract: True
+ndc: False
+scene_bbox: [[-2.0, -2.0, -2.0], [2.0, 2.0, 2.0]]
+global_scale: [10, 6, 4]
+global_translation: [0, -0.3, -1.2]
+multiscale_res: [1] 
+proposal_net_args_list: [
+   {'num_input_coords': 3, 'num_output_coords': 8, 'resolution': [128, 128, 128]},
+   {'num_input_coords': 3, 'num_output_coords': 8, 'resolution': [256, 256, 256]}
+]
+
+# Stable diffusion settings
+prompt: ""
+pretrained_model_name_or_path: 'runwayml/stable-diffusion-v1-5'
+revision: 'main'
+latent_resolution: 64
+latent_channel_dim : 4 
+diffusion_batch_size : 1
+compile_k_planes_diffuser: False
+
+# K-Planes settings
+nb_kplanes : 3
+kplanes_resolution : 512
+kplanes_channel_dim : 32
+explicit_decoding: False
+
+# Regularization settings
+plane_tv_weight: 0.0001
+plane_tv_weight_proposal_net: 0.0001
+histogram_loss_weight: 1.0
+distortion_loss_weight: 0.001
+
+# Ray marching settings
+single_jitter: False
+num_samples: 48
+num_proposal_samples: [256, 128]
+num_proposal_iterations: 2
+use_same_proposal_network: False
+use_proposal_weight_anneal: True
+
+# Training settings
+save_every: 1
+valid_every: 50
+print_every: 200
+kplanes_print_every: 1000
+diffusion_print_every: 100
+save_outputs: True
+train_fp16: True
+keep_scheduler: False
