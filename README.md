@@ -1,7 +1,7 @@
 # RefinedFields: Radiance Fields Refinement for Planar Scene Representations
 
 > Karim Kassab, Antoine Schnepf, Jean-Yves Franceschi, Laurent Caraffa, Jeremie Mary, Valérie Gouet-Brunet<br>
-| [Project Page](https://refinedfields.github.io) |
+| [Project Page](https://refinedfields.github.io) | [Full Paper](https://openreview.net/forum?id=S6JpSsYBDZ) | [Preprint](https://arxiv.org/abs/2312.00639) |
 
 ![Figure](./assets/figure.svg)
 
@@ -49,13 +49,13 @@ This code is open-source. It is shared under the [Apache 2.0 License](https://ww
 
 ## Citation
 ```
-@article{kassab2023refinedfields,
-    title={RefinedFields: Radiance Fields Refinement for Unconstrained Scenes},
-    author={Kassab, Karim and Schnepf, Antoine and Franceschi, Jean-Yves and Caraffa, Laurent and Mary, Jeremie and Gouet-Brunet, Val{\'e}rie},
-    journal={arXiv preprint arXiv:2312.00639},
-    year={2023}
+@article{kassab2025refinedfields,
+    title={RefinedFields: Radiance Fields Refinement for Planar Scene Representations},
+    author={Karim Kassab and Antoine Schnepf and Jean-Yves Franceschi and Laurent Caraffa and Jeremie Mary and Val{\'e}rie Gouet-Brunet},
+    journal={Transactions on Machine Learning Research},
+    issn={2835-8856},
+    year={2025}
 }
-   
 ```
 
 
