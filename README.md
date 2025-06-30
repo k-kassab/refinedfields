@@ -1,4 +1,5 @@
 # RefinedFields: Radiance Fields Refinement for Planar Scene Representations
+### Transactions on Machine Learning Research (TMLR)
 
 > Karim Kassab, Antoine Schnepf, Jean-Yves Franceschi, Laurent Caraffa, Jeremie Mary, Valérie Gouet-Brunet<br>
 | [Project Page](https://refinedfields.github.io) | [Full Paper](https://openreview.net/forum?id=S6JpSsYBDZ) | [Preprint](https://arxiv.org/abs/2312.00639) |
